@@ -1,10 +1,8 @@
-version: '3'
+version: '3.9'
 services:
   web:
     build: site
     container_name: webserver
-    ports :
-     - "8080:8080"
     volumes:
      - ./site/html:/var/www/html/
 
@@ -12,8 +10,6 @@ services:
     build: server-proxy
     container_name: reverse-proxy
     ports:
-      - "80:80"
-    depends_on:
-      - "web"
+      - "5000:443"
 
 

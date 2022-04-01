@@ -1,5 +1,8 @@
 FROM nginx:alpine
 
-COPY ./default.conf /etc/nginx/conf.d/default.conf
+RUN apk add openssl
 
-COPY ./ssl/ /etc/ssl/certs/nginx/
+COPY certs /etc/certs
+
+COPY ./conf/default.conf /etc/nginx/conf.d/default.conf
+
