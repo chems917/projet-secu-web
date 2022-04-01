@@ -1,3 +1,5 @@
+#!/bin/sh
+
 nginx
 fail2ban-server
 
