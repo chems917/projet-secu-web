@@ -12,6 +12,8 @@ RUN mkdir /app
 
 COPY server.py ./app/server.py
 
+COPY html ./app/html
+
 WORKDIR /app
 
 CMD python3 server.py
