@@ -1,9 +1,18 @@
 version: '3'
 services:
   web:
-    image: serverpy
+    build: site
     container_name: webserver
     ports :
      - "8080:8080"
     volumes:
      - ./html:/var/www/html/
+
+  server-reverse-proxy:
+    build: server-proxy
+    container_name: reverse-proxy
+
+    ports:
+      - "80:80"
+    depends_on:
+      - "web"
