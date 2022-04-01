@@ -6,11 +6,11 @@ RUN apk add python3
 
 RUN apk add py3-pip
 
-CMD pip3 install flask pyjwt sqlite3
+RUN pip3 install flask pyjwt pysqlite3
 
 RUN mkdir /app
 
-COPY server.py /app/server.py
+COPY server.py ./app/server.py
 
 WORKDIR /app
 

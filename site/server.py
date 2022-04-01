@@ -21,7 +21,7 @@ def sqlite3_connect(custom_dbfile=None):
     conn = None
     try:
         if not custom_dbfile:
-            conn = sqlite3.connect('./db.sqlite')
+            conn = sqlite3.connect('db.sqlite')
         else:
             conn = sqlite3.connect(custom_dbfile)
     except Exception as e:

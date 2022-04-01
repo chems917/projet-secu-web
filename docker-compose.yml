@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    build: site
+    container_name: webserver
+    ports :
+     - "8080:8080"
+    volumes:
+     - ./html:/var/www/html/
