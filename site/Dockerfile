@@ -12,9 +12,9 @@ RUN mkdir /app
 
 COPY server.py ./app/server.py
 
-COPY html ./app/html
+COPY /html ./app/html
 
-COPY db.sqlite /app/db.sqlite
+COPY db.sqlite ./app/db.sqlite
 
 WORKDIR /app
 
