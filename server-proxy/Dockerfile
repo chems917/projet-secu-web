@@ -12,6 +12,8 @@ COPY ./conf/fail2ban.conf /etc/fail2ban/fail2ban.conf
 
 COPY ./fail2ban-rules/* /etc/fail2ban/filter.d/
 
+COPY ./fail2ban-jails/* /etc/fail2ban/jail.d/
+
 COPY ./conf/nginx.conf /etc/nginx/nginx.conf
 
 COPY certs /etc/certs
